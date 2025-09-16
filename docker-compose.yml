@@ -36,6 +36,7 @@ services:
          MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
       volumes:
          # for persistence storage
+         # This mounts a named Docker volume called mongodb-data into the container path /data/db (Mongo’s data directory).
          - mongodb-data:/data/db
       networks:
          - library-mern-api

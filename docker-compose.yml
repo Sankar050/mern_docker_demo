@@ -56,6 +56,7 @@ services:
          ME_CONFIG_BASICAUTH_USERNAME: admin
          ME_CONFIG_BASICAUTH_PASSWORD: admin123456
       volumes:
+      # If we want mongo-express to access the same data volume as MongoDB, we should mount it at the same path MongoDB uses (/data/db) we already mounted "(/data/db)" this path docker volume "mongodb" in previous step
          - mongodb-data
       networks:
          - library-mern-api

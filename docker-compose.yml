@@ -10,6 +10,7 @@ services:
       # volumes allow sharing of data in run-time between host and container
       volumes:
          # don't overwrite this folder in container with the local one
+         # Prevents your local (host) node_modules from overwriting the container’s node_modules.
          - /app/node_modules
          # map current local directory to the /app inside the container
          #This is a must for development in order to update our container whenever a change to the source code is made. Without this, you would have to rebuild the image each time you make a change to source code.

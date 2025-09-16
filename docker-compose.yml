@@ -14,7 +14,7 @@ services:
          - /app/node_modules
          # map current local directory to the /app inside the container
          #This is a must for development in order to update our container whenever a change to the source code is made. Without this, you would have to rebuild the image each time you make a change to source code.
-
+         # "./server:/app": Lets you edit source code on your computer and have it reflected in the container immediately.
          - ./server:/app
       ports:
          - 5000:5000
